@@ -1,5 +1,6 @@
 import { useMoralis } from "react-moralis"
 import Header from "./Header"
+// import styles from "../app/page.module.css"
 import LotteryEntrance from "./LotteryEntrance"
 const supportedChains = ["31337", "11155111"]
 

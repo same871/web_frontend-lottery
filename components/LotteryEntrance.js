@@ -80,7 +80,7 @@ export default function LotteryEntrance() {
         updateUI()
     }
     return (
-        <div>
+        <div className="p-5">
             <h1 className="py-4 px-4 font-bold text-3xl">Lottery</h1>
             {lotteryAddress ? (
                 <>
@@ -101,7 +101,7 @@ export default function LotteryEntrance() {
                         )}
                     </button>
 
-                    <div> Number of players: {numberOfPlayers}</div>
+                    <div>Number of players: {numberOfPlayers}</div>
                     <div>Entrance Fee: {ethers.utils.formatUnits(entranceFee, "ether")} ETH</div>
                     <div>Recent Winner: {winner}</div>
                 </>
