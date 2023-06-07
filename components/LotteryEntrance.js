@@ -29,6 +29,7 @@ export default function LotteryEntrance() {
         msgValue: entranceFee,
     })
 
+    // the following function are reading from the contract
     const { runContractFunction: getEntranceFee } = useWeb3Contract({
         abi: abi,
         contractAddress: lotteryAddress,
@@ -50,6 +51,7 @@ export default function LotteryEntrance() {
         params: {},
     })
 
+    // the function updates the website updated content
     const updateUI = async () => {
         const entranceFeeFromCall = (await getEntranceFee()).toString()
         const playerNumFromCall = (await getNumberOfPlayers()).toString()
@@ -74,6 +76,7 @@ export default function LotteryEntrance() {
         })
     }
 
+    // creates a popup when the transaction finish successfuly
     const handleSuccess = async (tx) => {
         await tx.wait(1)
         handleNewNotification(tx)
